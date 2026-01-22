@@ -1,0 +1,2 @@
+timestamp,lat_accel,lat_accel_ff,bearing_feas,bearing_feas_on_track,signed_track_error,track_error_bound,airspeed_ref,bearing,heading_ref,min_ground_speed_ref,adapted_period,p_gain,time_const,can_run_factor,wind_est_valid
+1578813,0.0,0.0,1.0,1.0,0.0,212.13,15.0,0.0,0.0,0.0,10.0,0.8885,7.071,0.0,0

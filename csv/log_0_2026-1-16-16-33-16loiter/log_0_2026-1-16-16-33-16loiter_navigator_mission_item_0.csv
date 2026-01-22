@@ -1,0 +1,3 @@
+timestamp,latitude,longitude,time_inside,acceptance_radius,loiter_radius,yaw,altitude,sequence_current,nav_cmd,frame,origin,loiter_exit_xtrack,force_heading,altitude_is_relative,autocontinue,vtol_back_transition
+100351947,31.185745,117.19774,0.0,0.0,50.264072,nan,69.525116,0,31,0,0,0,0,0,1,0
+109708987,31.185797,117.197464,0.0,0.0,50.264072,nan,35.0,0,17,0,0,0,0,1,1,0

@@ -1,0 +1,2 @@
+timestamp,bias_x[0],bias_x[1],bias_x[2],bias_x[3],bias_y[0],bias_y[1],bias_y[2],bias_y[3],bias_z[0],bias_z[1],bias_z[2],bias_z[3],valid[0],valid[1],valid[2],valid[3],stable[0],stable[1],stable[2],stable[3]
+157805909,-0.008426743,-0.120822206,0.0,0.0,0.0011288734,-0.04990758,0.0,0.0,0.03016741,-0.021078564,0.0,0.0,1,0,0,0,1,0,0,0

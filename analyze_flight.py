@@ -604,6 +604,28 @@ def plot_baro_altitude(
     plt.close(fig)
 
 
+def plot_speed_time(
+    df_speed: pd.DataFrame,
+    speed_col: str,
+    out_path: Path,
+    *,
+    title_suffix: str,
+) -> None:
+    plt = _require_matplotlib()
+    dfp = _downsample_for_plot(df_speed[["t", speed_col]].copy())
+    fig, ax = plt.subplots(figsize=(10, 4))
+    ax.plot(dfp["t"], dfp[speed_col], label=f"{speed_col} (m/s)")
+    ax.set_title(f"Speed vs Time ({title_suffix})")
+    ax.set_xlabel("t (s, relative)")
+    ax.set_ylabel("speed (m/s)")
+    ax.legend(loc="best", fontsize="small")
+
+    fig.tight_layout()
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(out_path, dpi=150)
+    plt.close(fig)
+
+
 def _rms(series: pd.Series) -> float:
     x = pd.to_numeric(series, errors="coerce")
     x = x[np.isfinite(x)]
@@ -804,6 +826,7 @@ def main(argv: list[str]) -> int:
     topics.append(TopicData("vehicle_status", ["vehicle_status"], find_topic_files(logdir, ["vehicle_status"])))
     topics.append(TopicData("sensor_gps", ["sensor_gps", "vehicle_gps_position", "gps_position"], find_topic_files(logdir, ["sensor_gps", "vehicle_gps_position", "gps_position"])))
     topics.append(TopicData("vehicle_air_data", ["vehicle_air_data"], find_topic_files(logdir, ["vehicle_air_data"])))
+    topics.append(TopicData("airspeed_validated", ["airspeed_validated"], find_topic_files(logdir, ["airspeed_validated"])))
 
     # Load data
     for i, t in enumerate(topics):
@@ -960,8 +983,57 @@ def main(argv: list[str]) -> int:
         else:
             missing_items.append("altitude_baro.png requires vehicle_air_data topic.")
 
+        speed_source = "n/a"
+        df_speed = pd.DataFrame()
+        speed_col = None
+        t_gps = next((t for t in topics if t.logical_name == "sensor_gps"), None)
+        df_gps = (t_gps.df.copy() if t_gps and t_gps.df is not None else pd.DataFrame())
+        if not df_gps.empty and "t" in df_gps.columns and "vel_m_s" in df_gps.columns:
+            df_speed = df_gps[["t", "vel_m_s"]].copy()
+            df_speed["vel_m_s"] = pd.to_numeric(df_speed["vel_m_s"], errors="coerce")
+            df_speed = df_speed.dropna(subset=["t", "vel_m_s"])
+            speed_col = "vel_m_s"
+            speed_source = "sensor_gps.vel_m_s"
+        else:
+            t_pos = next((t for t in topics if t.logical_name == "vehicle_local_position"), None)
+            df_pos = (t_pos.df.copy() if t_pos and t_pos.df is not None else pd.DataFrame())
+            if not df_pos.empty and all(c in df_pos.columns for c in ("t", "vx", "vy")):
+                df_pos = df_pos.copy()
+                df_pos["vx"] = pd.to_numeric(df_pos["vx"], errors="coerce")
+                df_pos["vy"] = pd.to_numeric(df_pos["vy"], errors="coerce")
+                df_pos = df_pos.dropna(subset=["t", "vx", "vy"])
+                if not df_pos.empty:
+                    df_speed = df_pos[["t"]].copy()
+                    df_speed["speed_m_s"] = np.hypot(df_pos["vx"].to_numpy(), df_pos["vy"].to_numpy())
+                    speed_col = "speed_m_s"
+                    speed_source = "vehicle_local_position.vx/vy"
+            else:
+                t_asp = next((t for t in topics if t.logical_name == "airspeed_validated"), None)
+                df_asp = (t_asp.df.copy() if t_asp and t_asp.df is not None else pd.DataFrame())
+                if not df_asp.empty and "t" in df_asp.columns:
+                    asp_col = _find_first_existing_column(
+                        df_asp,
+                        ["true_airspeed_m_s", "calibrated_airspeed_m_s", "indicated_airspeed_m_s"],
+                    )
+                    if asp_col:
+                        df_speed = df_asp[["t", asp_col]].copy()
+                        df_speed[asp_col] = pd.to_numeric(df_speed[asp_col], errors="coerce")
+                        df_speed = df_speed.dropna(subset=["t", asp_col])
+                        speed_col = asp_col
+                        speed_source = f"airspeed_validated.{asp_col}"
+
+        if speed_col and not df_speed.empty:
+            plot_speed_time(df_speed, speed_col, plots_dir / "speed_time.png", title_suffix=speed_source)
+            sp_stats = compute_stats(df_speed[speed_col])
+            stats_rows.append({"metric": "speed.m_s.p50", "value": sp_stats["p50"], "unit": "m/s", "notes": f"source={speed_source}"})
+            stats_rows.append({"metric": "speed.m_s.p95", "value": sp_stats["p95"], "unit": "m/s", "notes": f"source={speed_source}"})
+            stats_rows.append({"metric": "speed.m_s.max", "value": sp_stats["max"], "unit": "m/s", "notes": f"source={speed_source}"})
+        else:
+            missing_items.append("speed_time.png requires sensor_gps.vel_m_s or vehicle_local_position vx/vy or airspeed_validated.")
+
         overview["position_source"] = pos_source
         overview["altitude_source"] = alt_source
+        overview["speed_source"] = speed_source
 
     # 2) Flap frequency stats + anomalies + plot
     t_flap = next((t for t in topics if t.logical_name == "flap_frequency"), None)

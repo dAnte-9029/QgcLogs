@@ -1,0 +1,63 @@
+metric,value,unit,notes
+speed.m_s.p50,5.8220005,m/s,source=sensor_gps.vel_m_s
+speed.m_s.p95,8.993901,m/s,source=sensor_gps.vel_m_s
+speed.m_s.max,10.021001,m/s,source=sensor_gps.vel_m_s
+flap_frequency.mean_hz,3.0532376466284323,Hz,field=frequency_hz
+flap_frequency.std_hz,1.1287881408412743,Hz,field=frequency_hz
+flap_frequency.min_hz,-1.4667797,Hz,field=frequency_hz
+flap_frequency.p5_hz,0.0,Hz,field=frequency_hz
+flap_frequency.p50_hz,3.28248345,Hz,field=frequency_hz
+flap_frequency.p95_hz,4.10411785,Hz,field=frequency_hz
+flap_frequency.max_hz,4.399905,Hz,field=frequency_hz
+corr.freq_vs_roll_deg,0.029148685809644633,,pearson
+corr.freq_vs_pitch_deg,0.6476848125836776,,pearson
+corr.freq_vs_abs(p),0.35229321191279556,,pearson
+corr.freq_vs_abs(q),0.19275996187607972,,pearson
+corr.freq_vs_abs(r),0.2376362596373866,,pearson
+manual.roll.sat_ratio,0.001669449081803005,,threshold=0.95
+corr.freq_vs_manual_roll,0.010265947112292744,,pearson
+actuator_outputs.output[0].min,1000.0,,
+actuator_outputs.output[0].max,2200.0,,
+actuator_outputs.output[0].top_ratio,0.023799582463465554,,>= max-1%range
+actuator_outputs.output[0].bottom_ratio,0.037160751565762005,,<= min+1%range
+corr.freq_vs_output[0],0.5109592961256428,,pearson
+actuator_outputs.output[1].min,1000.0,,
+actuator_outputs.output[1].max,2019.0,,
+actuator_outputs.output[1].top_ratio,0.0004175365344467641,,>= max-1%range
+actuator_outputs.output[1].bottom_ratio,0.12192066805845511,,<= min+1%range
+corr.freq_vs_output[1],-0.2881218095244978,,pearson
+actuator_outputs.output[2].min,1000.0,,
+actuator_outputs.output[2].max,1926.0,,
+actuator_outputs.output[2].top_ratio,0.0004175365344467641,,>= max-1%range
+actuator_outputs.output[2].bottom_ratio,0.09227557411273486,,<= min+1%range
+corr.freq_vs_output[2],0.98545409217799,,pearson
+actuator_outputs.output[3].min,0.0,,
+actuator_outputs.output[3].max,1000.0,,
+actuator_outputs.output[3].top_ratio,0.0004175365344467641,,>= max-1%range
+actuator_outputs.output[3].bottom_ratio,0.9995824634655532,,<= min+1%range
+corr.freq_vs_output[3],,,pearson
+actuator_outputs.output[4].min,800.0,,
+actuator_outputs.output[4].max,1563.0,,
+actuator_outputs.output[4].top_ratio,0.0008350730688935282,,>= max-1%range
+actuator_outputs.output[4].bottom_ratio,0.009603340292275574,,<= min+1%range
+corr.freq_vs_output[4],-0.051037023382603325,,pearson
+actuator_outputs.output[5].min,0.0,,
+actuator_outputs.output[5].max,1000.0,,
+actuator_outputs.output[5].top_ratio,0.0004175365344467641,,>= max-1%range
+actuator_outputs.output[5].bottom_ratio,0.9995824634655532,,<= min+1%range
+corr.freq_vs_output[5],,,pearson
+actuator_outputs.output[6].min,0.0,,
+actuator_outputs.output[6].max,1000.0,,
+actuator_outputs.output[6].top_ratio,0.0004175365344467641,,>= max-1%range
+actuator_outputs.output[6].bottom_ratio,0.9995824634655532,,<= min+1%range
+corr.freq_vs_output[6],,,pearson
+actuator_outputs.output[7].min,0.0,,
+actuator_outputs.output[7].max,1000.0,,
+actuator_outputs.output[7].top_ratio,0.0004175365344467641,,>= max-1%range
+actuator_outputs.output[7].bottom_ratio,0.9995824634655532,,<= min+1%range
+corr.freq_vs_output[7],,,pearson
+attitude_error.roll_rms_deg,14.107522210373647,deg,
+attitude_error.pitch_rms_deg,17.89423157586724,deg,
+rates_error.p_rms,0.8205249787022936,rad/s,
+rates_error.q_rms,0.8812145235432441,rad/s,
+rates_error.r_rms,0.30077302169470566,rad/s,
