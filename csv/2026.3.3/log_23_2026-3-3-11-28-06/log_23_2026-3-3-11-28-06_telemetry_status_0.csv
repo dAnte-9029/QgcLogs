@@ -1,0 +1,9 @@
+timestamp,data_rate,rate_multiplier,tx_rate_avg,tx_error_rate_avg,tx_message_count,tx_buffer_overruns,rx_rate_avg,rx_message_count,rx_message_lost_count,rx_buffer_overruns,rx_parse_errors,rx_packet_drop_count,rx_message_lost_rate,type,mode,flow_control,forwarding,mavlink_v2,ftp,streams,heartbeat_type_antenna_tracker,heartbeat_type_gcs,heartbeat_type_onboard_controller,heartbeat_type_gimbal,heartbeat_type_adsb,heartbeat_type_camera,heartbeat_type_parachute,heartbeat_type_open_drone_id,heartbeat_component_telemetry_radio,heartbeat_component_log,heartbeat_component_osd,heartbeat_component_vio,heartbeat_component_pairing_manager,heartbeat_component_udp_bridge,heartbeat_component_uart_bridge,open_drone_id_system_healthy,parachute_system_healthy
+192163795,3000.0,1.0,2950.372,0.0,11206,205,67.66452,635,8,0,0,0,0.012598425,0,0,1,1,1,1,59,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+193163850,3000.0,1.0,2853.6917,0.0,11273,205,220.89246,640,8,0,0,0,0.0125,0,0,1,1,1,1,59,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+193778760,3000.0,1.0,2627.9976,0.0,11304,205,38.99996,641,8,0,0,0,0.012480499,0,0,1,1,1,1,59,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+195169758,3000.0,1.0,2576.163,0.0,11405,205,41.791756,650,8,0,0,0,0.012307692,0,0,1,1,1,1,59,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+196164811,3000.0,1.0,2929.0708,0.0,11475,205,221.77821,659,8,0,0,0,0.012139605,0,0,1,1,1,1,59,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+197166889,3000.0,1.0,2663.3364,0.0,11537,205,95.90409,660,8,0,0,0,0.012121212,0,0,1,1,1,1,59,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+198201759,3000.0,1.0,2612.3875,0.0,11603,205,41.95804,663,8,0,0,0,0.012066365,0,0,1,1,1,1,59,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+199206279,3000.0,1.0,2663.976,0.0,11668,205,41.999626,664,8,0,0,0,0.012048192,0,0,1,1,1,1,59,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

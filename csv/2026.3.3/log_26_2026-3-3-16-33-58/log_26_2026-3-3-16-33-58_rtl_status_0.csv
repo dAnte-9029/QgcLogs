@@ -1,0 +1,4 @@
+timestamp,safe_points_id,is_evaluation_pending,has_vtol_approach,rtl_type,safe_point_index
+83036879,0,0,-40,1,255
+85061886,0,0,-40,1,255
+87086782,0,0,-40,1,255

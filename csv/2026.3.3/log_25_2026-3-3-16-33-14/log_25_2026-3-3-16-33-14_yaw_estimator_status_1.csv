@@ -1,0 +1,2 @@
+timestamp,timestamp_sample,yaw_composite,yaw_variance,yaw[0],yaw[1],yaw[2],yaw[3],yaw[4],innov_vn[0],innov_vn[1],innov_vn[2],innov_vn[3],innov_vn[4],innov_ve[0],innov_ve[1],innov_ve[2],innov_ve[3],innov_ve[4],weight[0],weight[1],weight[2],weight[3],weight[4],yaw_composite_valid
+46823131,46635408,-0.8460593,3.604439,-2.4986877,-1.2518266,-0.013814272,1.2408667,2.515194,-0.006628004,-0.01068037,-0.013794461,-0.011739919,-0.0072177425,0.050428662,0.05235084,0.049161945,0.04513719,0.045902014,0.1991296,0.2076285,0.20550607,0.19578785,0.19194794,0

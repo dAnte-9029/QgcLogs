@@ -1,0 +1,17 @@
+timestamp,timestamp_sample,position_drift_rate_horizontal_m_s,position_drift_rate_vertical_m_s,filtered_horizontal_speed_m_s,checks_passed,check_fail_gps_fix,check_fail_min_sat_count,check_fail_max_pdop,check_fail_max_horz_err,check_fail_max_vert_err,check_fail_max_spd_err,check_fail_max_horz_drift,check_fail_max_vert_drift,check_fail_max_horz_spd_err,check_fail_max_vert_spd_err,check_fail_spoofed_gps
+191572003,191379678,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+192071040,191878683,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+192579459,192379676,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+193078355,192878677,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+193576973,193379680,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+194075807,193879676,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+194574485,194378678,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+195073328,194881680,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+195571998,195379679,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+196070811,195879681,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+196569502,196376745,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+197068328,196877677,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+197577019,197379694,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+198075810,197878679,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+198574536,198378675,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+199073359,198878679,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0

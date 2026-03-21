@@ -1,0 +1,2 @@
+timestamp,timestamp_sample,device_id,x,y,z,temperature,error_count,clip_counter[0],clip_counter[1],clip_counter[2],samples
+46756721,46756631,4325386,-0.019174758,0.0072437976,0.006604639,nan,0,0,0,0,5

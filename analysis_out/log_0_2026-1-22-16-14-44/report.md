@@ -23,6 +23,7 @@ python3 analyze_flight.py --logdir csv/log_0_2026-1-22-16-14-44 --plots --report
 | sensor_gps | log_0_2026-1-22-16-14-44_vehicle_gps_position_0.csv | timestamp | timestamp_sample, latitude_deg, longitude_deg, altitude_msl_m, altitude_ellipsoid_m, time_utc_usec, device_id, s_variance_m_s, c_variance_rad, eph, epv, hdop, vdop, noise_per_ms, jamming_indicator, vel_m_s, vel_n_m_s, vel_e_m_s, vel_d_m_s, cog_rad |
 | vehicle_air_data | log_0_2026-1-22-16-14-44_vehicle_air_data_0.csv | timestamp | timestamp_sample, baro_device_id, baro_alt_meter, baro_pressure_pa, ambient_temperature, rho, temperature_source, calibration_count |
 | airspeed_validated | log_0_2026-1-22-16-14-44_airspeed_validated_0.csv | timestamp | indicated_airspeed_m_s, calibrated_airspeed_m_s, true_airspeed_m_s, calibrated_ground_minus_wind_m_s, true_ground_minus_wind_m_s, airspeed_derivative_filtered, throttle_filtered, pitch_filtered, airspeed_sensor_measurement_valid, selected_airspeed_index |
+| battery_status | log_0_2026-1-22-16-14-44_battery_status_0.csv | timestamp | voltage_v, current_a, current_average_a, discharged_mah, remaining, scale, time_remaining_s, temperature, voltage_cell_v[0], voltage_cell_v[1], voltage_cell_v[2], voltage_cell_v[3], voltage_cell_v[4], voltage_cell_v[5], voltage_cell_v[6], voltage_cell_v[7], voltage_cell_v[8], voltage_cell_v[9], voltage_cell_v[10], voltage_cell_v[11] |
 
 Missing topics:
 - actuator_controls_0
@@ -43,6 +44,7 @@ Missing topics:
 - position_source: vehicle_local_position (x,y)
 - altitude_source: vehicle_air_data.baro_alt_meter
 - speed_source: sensor_gps.vel_m_s
+- battery_source: battery_status.current_a
 
 ## 4) Flap Frequency
 

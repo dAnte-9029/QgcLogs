@@ -1,0 +1,2 @@
+timestamp,timestamp_sample,device_id,magnetometer_ga[0],magnetometer_ga[1],magnetometer_ga[2],calibration_count
+46412868,46411902,527633,0.30024144,-0.035805006,0.38249797,3

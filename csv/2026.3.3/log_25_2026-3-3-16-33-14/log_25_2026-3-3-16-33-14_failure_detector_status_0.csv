@@ -1,0 +1,4 @@
+timestamp,imbalanced_prop_metric,motor_failure_mask,motor_stop_mask,fd_roll,fd_pitch,fd_alt,fd_ext,fd_arm_escs,fd_battery,fd_imbalanced_prop,fd_motor
+46010974,-4.0536284e-05,0,0,0,0,0,0,0,0,0,0
+46518725,-0.0008100755,0,0,0,0,0,0,0,0,0,0
+46969831,-0.0010764827,0,0,0,0,0,0,0,0,0,0

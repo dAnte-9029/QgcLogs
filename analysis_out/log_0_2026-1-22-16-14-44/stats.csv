@@ -2,6 +2,9 @@ metric,value,unit,notes
 speed.m_s.p50,0.348,m/s,source=sensor_gps.vel_m_s
 speed.m_s.p95,7.175450075,m/s,source=sensor_gps.vel_m_s
 speed.m_s.max,8.426001,m/s,source=sensor_gps.vel_m_s
+battery.current_a.p50,0.0,A,source=current_a
+battery.current_a.p95,5.19489,A,source=current_a
+battery.voltage_v.p50,12.374179,V,source=voltage_v
 flap_frequency.mean_hz,0.7837456513640726,Hz,field=frequency_hz
 flap_frequency.std_hz,1.3456074368212094,Hz,field=frequency_hz
 flap_frequency.min_hz,-2.3211496,Hz,field=frequency_hz

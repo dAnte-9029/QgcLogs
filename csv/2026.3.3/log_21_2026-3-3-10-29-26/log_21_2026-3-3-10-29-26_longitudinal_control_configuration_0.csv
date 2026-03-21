@@ -1,0 +1,2 @@
+timestamp,pitch_min,pitch_max,throttle_min,throttle_max,climb_rate_target,sink_rate_target,speed_weight,enforce_low_height_condition,disable_underspeed_protection
+901314,nan,nan,0.0,0.0,nan,nan,0.5,0,0

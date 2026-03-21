@@ -1,0 +1,14 @@
+timestamp,timestamp_sample,position_drift_rate_horizontal_m_s,position_drift_rate_vertical_m_s,filtered_horizontal_speed_m_s,checks_passed,check_fail_gps_fix,check_fail_min_sat_count,check_fail_max_pdop,check_fail_max_horz_err,check_fail_max_vert_err,check_fail_max_spd_err,check_fail_max_horz_drift,check_fail_max_vert_drift,check_fail_max_horz_spd_err,check_fail_max_vert_spd_err,check_fail_spoofed_gps
+94821243,94624857,0.0010905132,0.0004915189,0.00019871446,1,0,0,0,0,0,0,0,0,0,0,0
+95313998,95125743,0.0032087301,0.0020344115,0.0005677368,1,0,0,0,0,0,0,0,0,0,0,0
+95816387,95624744,0.005324824,0.0022149011,0.0011555086,1,0,0,0,0,0,0,0,0,0,0,0
+96319040,96122750,0.0061301026,0.0006086254,0.0014713648,1,0,0,0,0,0,0,0,0,0,0,0
+96821196,96623743,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+97313947,97122743,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+97816321,97624762,1.8497636e-12,0.00039669147,0.00019556867,1,0,0,0,0,0,0,0,0,0,0,0
+98319374,98121742,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+98811342,98618742,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+99313941,99120742,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+99816211,99620742,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+100309066,100119377,nan,nan,nan,1,0,0,0,0,0,0,0,0,0,0,0
+100811287,100618743,0.0011119492,0.0002998352,0.00036519495,1,0,0,0,0,0,0,0,0,0,0,0

@@ -1,0 +1,10 @@
+timestamp,timestamp_sample,information_event_changes,gps_checks_passed,reset_vel_to_gps,reset_vel_to_flow,reset_vel_to_vision,reset_vel_to_zero,reset_pos_to_last_known,reset_pos_to_gps,reset_pos_to_vision,starting_gps_fusion,starting_vision_pos_fusion,starting_vision_vel_fusion,starting_vision_yaw_fusion,yaw_aligned_to_imu_gps,reset_hgt_to_baro,reset_hgt_to_gps,reset_hgt_to_rng,reset_hgt_to_ev
+190497040,57668083,12,0,1,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0
+191502158,57668083,12,0,1,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0
+192506753,57668083,12,0,1,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0
+193511566,57668083,12,0,1,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0
+194516532,57668083,12,0,1,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0
+195521384,57668083,12,0,1,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0
+196526268,57668083,12,0,1,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0
+197531117,57668083,12,0,1,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0
+198536052,57668083,12,0,1,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0

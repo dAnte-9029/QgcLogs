@@ -1,0 +1,7 @@
+timestamp,unallocated_torque[0],unallocated_torque[1],unallocated_torque[2],unallocated_thrust[0],unallocated_thrust[1],unallocated_thrust[2],handled_motor_failure_mask,motor_stop_mask,torque_setpoint_achieved,thrust_setpoint_achieved,actuator_saturation[0],actuator_saturation[1],actuator_saturation[2],actuator_saturation[3],actuator_saturation[4],actuator_saturation[5],actuator_saturation[6],actuator_saturation[7],actuator_saturation[8],actuator_saturation[9],actuator_saturation[10],actuator_saturation[11],actuator_saturation[12],actuator_saturation[13],actuator_saturation[14],actuator_saturation[15]
+46070987,8.940697e-08,-1.1920929e-07,0.0,9.313226e-10,0.0,0.0,0,0,1,1,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2
+46078471,8.940697e-08,-1.1920929e-07,0.0,9.313226e-10,0.0,0.0,0,0,1,1,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2
+46275468,8.940697e-08,-1.7881393e-07,0.0,9.313226e-10,0.0,0.0,0,0,1,1,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2
+46469982,8.940697e-08,-1.7881393e-07,0.0,9.313226e-10,0.0,0.0,0,0,1,1,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2
+46679458,8.940697e-08,-1.1920929e-07,0.0,9.313226e-10,0.0,0.0,0,0,1,1,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2
+46878960,8.940697e-08,-1.1920929e-07,0.0,9.313226e-10,0.0,0.0,0,0,1,1,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2

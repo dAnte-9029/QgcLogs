@@ -1,0 +1,2 @@
+timestamp,lat,lon,alt,x,y,z,roll,pitch,yaw,update_count,valid_alt,valid_hpos,valid_lpos,manual_home
+94516932,31.185634999999998,117.19760149999999,49.195,-1.3834703,0.5928915,3.786457,-0.0073063015,0.07516688,2.6239607,336,1,1,1,0

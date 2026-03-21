@@ -626,6 +626,45 @@ def plot_speed_time(
     plt.close(fig)
 
 
+def plot_battery_current(
+    df_batt: pd.DataFrame,
+    current_col: str,
+    voltage_col: str | None,
+    out_path: Path,
+) -> None:
+    plt = _require_matplotlib()
+    cols = ["t", current_col] + ([voltage_col] if voltage_col else [])
+    dfp = _downsample_for_plot(df_batt[cols].copy())
+    dfp[current_col] = pd.to_numeric(dfp[current_col], errors="coerce")
+    if voltage_col:
+        dfp[voltage_col] = pd.to_numeric(dfp[voltage_col], errors="coerce")
+
+    if voltage_col:
+        fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 6), sharex=True)
+        ax1.plot(dfp["t"], dfp[current_col], label=f"{current_col} (A)")
+        ax1.set_title("Battery Current")
+        ax1.set_ylabel("current (A)")
+        ax1.legend(loc="best", fontsize="small")
+
+        ax2.plot(dfp["t"], dfp[voltage_col], label=f"{voltage_col} (V)")
+        ax2.set_xlabel("t (s, relative)")
+        ax2.set_ylabel("voltage (V)")
+        ax2.legend(loc="best", fontsize="small")
+        fig.tight_layout()
+    else:
+        fig, ax = plt.subplots(figsize=(10, 4))
+        ax.plot(dfp["t"], dfp[current_col], label=f"{current_col} (A)")
+        ax.set_title("Battery Current")
+        ax.set_xlabel("t (s, relative)")
+        ax.set_ylabel("current (A)")
+        ax.legend(loc="best", fontsize="small")
+        fig.tight_layout()
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(out_path, dpi=150)
+    plt.close(fig)
+
+
 def _rms(series: pd.Series) -> float:
     x = pd.to_numeric(series, errors="coerce")
     x = x[np.isfinite(x)]
@@ -827,6 +866,7 @@ def main(argv: list[str]) -> int:
     topics.append(TopicData("sensor_gps", ["sensor_gps", "vehicle_gps_position", "gps_position"], find_topic_files(logdir, ["sensor_gps", "vehicle_gps_position", "gps_position"])))
     topics.append(TopicData("vehicle_air_data", ["vehicle_air_data"], find_topic_files(logdir, ["vehicle_air_data"])))
     topics.append(TopicData("airspeed_validated", ["airspeed_validated"], find_topic_files(logdir, ["airspeed_validated"])))
+    topics.append(TopicData("battery_status", ["battery_status"], find_topic_files(logdir, ["battery_status"])))
 
     # Load data
     for i, t in enumerate(topics):
@@ -1031,9 +1071,38 @@ def main(argv: list[str]) -> int:
         else:
             missing_items.append("speed_time.png requires sensor_gps.vel_m_s or vehicle_local_position vx/vy or airspeed_validated.")
 
+        battery_source = "n/a"
+        t_batt = next((t for t in topics if t.logical_name == "battery_status"), None)
+        df_batt = (t_batt.df.copy() if t_batt and t_batt.df is not None else pd.DataFrame())
+        if not df_batt.empty and "t" in df_batt.columns:
+            current_col = _find_first_existing_column(df_batt, ["current_a", "current", "battery_current"])
+            voltage_col = _find_first_existing_column(df_batt, ["voltage_v", "voltage", "battery_voltage"])
+            if current_col:
+                df_batt = df_batt.copy()
+                df_batt[current_col] = pd.to_numeric(df_batt[current_col], errors="coerce")
+                if voltage_col:
+                    df_batt[voltage_col] = pd.to_numeric(df_batt[voltage_col], errors="coerce")
+                df_batt = df_batt.dropna(subset=["t", current_col])
+                if not df_batt.empty:
+                    plot_battery_current(df_batt, current_col, voltage_col, plots_dir / "battery_current.png")
+                    cur_stats = compute_stats(df_batt[current_col])
+                    stats_rows.append({"metric": "battery.current_a.p50", "value": cur_stats["p50"], "unit": "A", "notes": f"source={current_col}"})
+                    stats_rows.append({"metric": "battery.current_a.p95", "value": cur_stats["p95"], "unit": "A", "notes": f"source={current_col}"})
+                    if voltage_col:
+                        v_stats = compute_stats(df_batt[voltage_col])
+                        stats_rows.append({"metric": "battery.voltage_v.p50", "value": v_stats["p50"], "unit": "V", "notes": f"source={voltage_col}"})
+                    battery_source = f"battery_status.{current_col}"
+                else:
+                    missing_items.append("battery_current.png requires numeric battery current data.")
+            else:
+                missing_items.append("battery_current.png requires battery_status with current_a (or similar).")
+        else:
+            missing_items.append("battery_current.png requires battery_status topic.")
+
         overview["position_source"] = pos_source
         overview["altitude_source"] = alt_source
         overview["speed_source"] = speed_source
+        overview["battery_source"] = battery_source
 
     # 2) Flap frequency stats + anomalies + plot
     t_flap = next((t for t in topics if t.logical_name == "flap_frequency"), None)

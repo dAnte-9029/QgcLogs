@@ -1,0 +1,3 @@
+timestamp,timestamp_sample,position_drift_rate_horizontal_m_s,position_drift_rate_vertical_m_s,filtered_horizontal_speed_m_s,checks_passed,check_fail_gps_fix,check_fail_min_sat_count,check_fail_max_pdop,check_fail_max_horz_err,check_fail_max_vert_err,check_fail_max_spd_err,check_fail_max_horz_drift,check_fail_max_vert_drift,check_fail_max_horz_spd_err,check_fail_max_vert_spd_err,check_fail_spoofed_gps
+46310967,46117154,0.004965325,0.0049182856,0.003952195,1,0,0,0,0,0,0,0,0,0,0,0
+46813370,46616739,0.006133573,0.006589213,0.004653853,1,0,0,0,0,0,0,0,0,0,0,0

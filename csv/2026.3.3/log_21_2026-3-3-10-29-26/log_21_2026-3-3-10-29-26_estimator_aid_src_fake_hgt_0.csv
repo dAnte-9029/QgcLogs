@@ -1,0 +1,2 @@
+timestamp,timestamp_sample,time_last_fuse,device_id,observation,observation_variance,innovation,innovation_filtered,innovation_variance,test_ratio,test_ratio_filtered,estimator_instance,innovation_rejected,fused
+16591925,16401729,1818574,0,-1.0193431e-05,100.0,0.97626513,0.8529916,102.07809,0.0010374341,0.000830124,0,0,0

@@ -1,0 +1,11 @@
+timestamp,freefall,ground_contact,maybe_landed,landed,in_ground_effect,in_descend,has_low_throttle,vertical_movement,horizontal_movement,rotational_movement,close_to_ground_or_skipped_check,at_rest
+94398601,0,0,0,1,0,0,0,0,0,0,0,1
+95406091,0,0,0,1,0,0,0,0,0,0,0,1
+96403597,0,0,0,1,0,0,0,0,0,0,0,0
+97411094,0,0,0,1,0,0,0,0,0,0,0,0
+97451006,0,0,0,1,0,0,0,0,0,0,0,1
+98099436,0,0,0,1,0,0,0,0,0,0,0,0
+99107098,0,0,0,1,0,0,0,0,0,0,0,0
+100114471,0,0,0,1,0,0,0,0,0,0,0,0
+100623211,0,0,0,1,0,0,0,0,0,0,0,1
+100693074,0,0,0,1,0,0,0,0,0,0,0,0

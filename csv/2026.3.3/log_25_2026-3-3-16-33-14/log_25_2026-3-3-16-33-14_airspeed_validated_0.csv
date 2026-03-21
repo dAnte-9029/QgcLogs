@@ -1,0 +1,7 @@
+timestamp,indicated_airspeed_m_s,calibrated_airspeed_m_s,true_airspeed_m_s,calibrated_ground_minus_wind_m_s,calibraded_airspeed_synth_m_s,airspeed_derivative_filtered,throttle_filtered,pitch_filtered,airspeed_source
+46005493,-3.0297496,-3.1022236,-3.0826082,nan,7.0,0.0,0.0074675083,0.0,1
+46105491,-3.0297496,-3.1022236,-3.082631,nan,7.0,0.0,0.008626745,0.0,1
+46205492,-2.78351,-2.8500936,-2.8320582,nan,7.0,0.0,0.009592802,0.0,1
+46405492,-2.569584,-2.6310503,-2.614388,nan,7.0,0.0,0.011068709,0.0,1
+46605491,-2.78351,-2.8500936,-2.8320336,nan,7.0,0.0,0.01209364,0.0,1
+46805492,-2.884529,-2.9535294,-2.9348214,nan,7.0,0.0,0.012805404,0.0,1

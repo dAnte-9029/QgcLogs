@@ -1,0 +1,4 @@
+timestamp,armed,prearmed,ready_to_arm,lockdown,kill,termination,in_esc_calibration_mode
+46010967,1,0,1,0,0,0,0
+46518718,1,0,1,0,0,0,0
+46969824,0,0,1,0,0,0,0

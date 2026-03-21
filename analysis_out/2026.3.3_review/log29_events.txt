@@ -1,0 +1,8 @@
+Active window: 2.60-46.80s
+Throttle p5/p50/p95: 0.152 / 0.631 / 0.651
+FlapFreq p5/p50/p95: 1.377 / 3.741 / 4.081 Hz
+TAS p5/p50/p95: -3.329 / 7.555 / 10.301 m/s
+
+High-throttle segments (>=0.60):
+t=9.40~21.60s, dur=12.20s, flap_mean=3.808Hz
+t=24.60~45.40s, dur=20.80s, flap_mean=3.829Hz

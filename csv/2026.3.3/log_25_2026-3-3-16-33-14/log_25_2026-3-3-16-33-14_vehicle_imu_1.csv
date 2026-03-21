@@ -1,0 +1,3 @@
+timestamp,timestamp_sample,accel_device_id,gyro_device_id,delta_angle[0],delta_angle[1],delta_angle[2],delta_velocity[0],delta_velocity[1],delta_velocity[2],delta_angle_dt,delta_velocity_dt,delta_angle_clipping,delta_velocity_clipping,accel_calibration_count,gyro_calibration_count
+46241547,46241344,2490378,2490378,-0.0001494895,-2.338173e-05,-2.0823734e-05,0.0017197422,0.0005471515,-0.048847165,4925,4925,0,0,1,1
+46739056,46738850,2490378,2490378,-8.665532e-05,-1.8179259e-06,-1.0830276e-05,0.0021292816,0.0009183798,-0.04830191,4926,4926,0,0,1,1

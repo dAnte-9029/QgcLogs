@@ -1,0 +1,9 @@
+timestamp,timestamp_sample,windspeed_north,windspeed_east,variance_north,variance_east,tas_innov,tas_innov_var,tas_scale_raw,tas_scale_raw_var,tas_scale_validated,beta_innov,beta_innov_var,source
+192207487,0,0.0,0.0,0.0,0.0,nan,nan,nan,nan,nan,0.0,0.0,0
+193207486,0,0.0,0.0,0.0,0.0,nan,nan,nan,nan,nan,0.0,0.0,0
+194207487,0,0.0,0.0,0.0,0.0,nan,nan,nan,nan,nan,0.0,0.0,0
+195207490,0,0.0,0.0,0.0,0.0,nan,nan,nan,nan,nan,0.0,0.0,0
+196207488,0,0.0,0.0,0.0,0.0,nan,nan,nan,nan,nan,0.0,0.0,0
+197207497,0,0.0,0.0,0.0,0.0,nan,nan,nan,nan,nan,0.0,0.0,0
+198207498,0,0.0,0.0,0.0,0.0,nan,nan,nan,nan,nan,0.0,0.0,0
+199207502,0,0.0,0.0,0.0,0.0,nan,nan,nan,nan,nan,0.0,0.0,0
